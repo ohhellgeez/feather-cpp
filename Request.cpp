@@ -1,4 +1,6 @@
 #include "Request.hpp"
+#include <sstream>
+#include <iostream>
 
 explicit Request::Request(const std::string& raw_request)
 {
