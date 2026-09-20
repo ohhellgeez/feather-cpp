@@ -5,7 +5,8 @@
 class Response
 {
 public:
-     explicit Response(int stat = 200, std::string bd = "") : status(stat), body(bd), headers() {}
+     explicit Response(int stat = 200, std::string bd = "")
+          : status(stat), body(bd), headers() {}
      
      void set_status(int stat);
      void set_body(const std::string& bd);
