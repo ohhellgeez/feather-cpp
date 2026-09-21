@@ -22,4 +22,6 @@ private:
      int status;
      std::unordered_map<std::string, std::string> headers;
      std::string body;
+     bool is_valid_status(int stat);
+     std::string get_status_text(int stat) const;
 };

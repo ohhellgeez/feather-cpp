@@ -2,7 +2,7 @@
 #include <sstream>
 #include <iostream>
 
-explicit Request::Request(const std::string& raw_request)
+Request::Request(const std::string& raw_request)
 {
      parse(raw_request);
 }
@@ -52,3 +52,9 @@ void Request::parse(const std::string& raw_request)
      body_stream << stream.rdbuf();
      body = body_stream.str();
 }
+
+const std::string& Request::get_method() const { return method; }
+
+const std::string& Request::get_path() const { return path; }
+
+const std::string& Request::get_body() const { return body; }

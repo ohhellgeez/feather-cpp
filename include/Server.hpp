@@ -5,7 +5,7 @@
 class Server
 {
 public:
-     Server(Router& router_, uint16_t port);
+     Server(Router& router_, uint16_t port_);
      void run();
 private:
      Router& router;
