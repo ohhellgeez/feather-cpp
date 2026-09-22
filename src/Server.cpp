@@ -5,7 +5,7 @@
 #include <arpa/inet.h>
 #include <iostream>
 
-Server::Server(Router& router_, uint16_t port_) : router(router_), port(port_), server_fd(-1)
+Server::Server(Router& router_, uint16_t port_) : router(router_), server_fd(-1), port(port_)
 {
      server_fd = socket(AF_INET, SOCK_STREAM, 0);
      if (server_fd == -1)

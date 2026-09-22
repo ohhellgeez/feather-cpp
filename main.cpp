@@ -7,8 +7,8 @@
 int main() 
 {
      Router router;
-     router.get("/", [](const Request& req)
-     {
+     router.get("/", [](const Request&)
+     {    
           Response res(200, "Hello, World from feather-cpp!");
           res.set_header("Content-Type", "text/plain");
         
